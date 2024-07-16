@@ -1,11 +1,11 @@
 'use client'
 
-import { useAuth } from './AuthProvider';
+import { useAuth } from '../AuthProvider';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
-import NavBar from './components/NavBar';
+import NavBar from '../components/NavBar';
 
-export default function Home() {
+export default function Headlines() {
   const { user } = useAuth();
   const router = useRouter();
 
@@ -21,8 +21,8 @@ export default function Home() {
     <div>
       <NavBar />
       <main className="p-4">
-        <h1>Welcome, {user.displayName || user.email}!</h1>
-        {/* Your main content here */}
+        <h1>Headlines</h1>
+        {/* Your headlines content here */}
       </main>
     </div>
   );
