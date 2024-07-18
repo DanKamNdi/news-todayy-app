@@ -1,9 +1,10 @@
-'use client'
+"use client";
 
 import { useAuth } from './AuthProvider';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import NavBar from './components/NavBar';
+import NewsFeed from './components/NewsFeed';
 
 export default function Home() {
   const { user } = useAuth();
@@ -20,9 +21,16 @@ export default function Home() {
   return (
     <div>
       <NavBar />
-      <main className="p-4">
-        <h1>Welcome, {user.displayName || user.email}!</h1>
-        {/* Your main content here */}
+      <main className="p-2">
+        <div className="flex p-2">
+          <div className="flex flex-initial md:w-52">
+          </div>
+          <div className="flex-1 p-2">
+            <NewsFeed />
+          </div>
+          <div className="flex flex-initial md:w-52">
+          </div>
+        </div>
       </main>
     </div>
   );
