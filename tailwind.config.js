@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       colors: {
         navBarBackground: '#202124',
-        navBarWhite: '#E2E2E3'
+        navBarWhite: '#E2E2E3',
+        card: '#1F1F1F'
       }
     },
   },
