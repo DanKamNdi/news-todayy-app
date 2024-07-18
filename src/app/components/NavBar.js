@@ -8,8 +8,8 @@ export default function NavBar() {
   const { user, signOut } = useAuth();
 
   return (
-    <nav className="flex justify-evenly items-center p-4 bg-navBarBackground">
-      <div className="flex items-center">
+    <nav className="flex justify-between items-center p-4 bg-navBarBackground">
+      <div className="flex flex-1">
         <Link href="/">
           <svg width="200" height="40" xmlns="http://www.w3.org/2000/svg">
             <rect width="100%" height="100%" fill="transparent"/>
@@ -17,13 +17,13 @@ export default function NavBar() {
           </svg>
         </Link>
       </div>
-      <div className="flex items-center">
+      <div className="flex flex-1 justify-center">
         <Link href="/" className="mx-4 font-semibold">Home</Link>
         <Link href="/headlines" className="mx-4 font-semibold">Headlines</Link>
         <Link href="/business" className="mx-4 font-semibold">Business</Link>
         <Link href="/technology" className="mx-4 font-semibold">Technology</Link>
       </div>
-      <div className="flex items-center">
+      <div className="flex flex-1 justify-end">
         {user && (
           <>
             <div className="relative group">
