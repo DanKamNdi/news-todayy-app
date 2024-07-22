@@ -1,6 +1,7 @@
 # News Todayy
 
-News Todayy is a modern, responsive web application built with Next.js that provides users with up-to-date news from various categories. It features user authentication and a sleek, user-friendly interface.
+News Todayy is a modern, responsive web application built with Next.js that provides users with up-to-date news from various categories. It features user authentication and a sleek, user-friendly interface. \
+To view the live project visit "https://news-todayy-app.vercel.app/"
 
 ## Features
 
@@ -46,6 +47,12 @@ To get a local copy up and running, follow these steps:
 5. Run the development server:
    `npm run dev`
 6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Authentication and Middleware
+User authentication is handled using Firebase Authentication. To protect certain routes and ensure only authenticated users can access them, middleware is used.
+
+## Protected Routes
+Protected routes are implemented to ensure that only authenticated users can access specific pages, such as the personalized news feed. If a user tries to access a protected route without being authenticated, they are redirected to the authentication page.
 
 ## Deployment
 
