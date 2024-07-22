@@ -23,12 +23,12 @@ export default function Home() {
       <NavBar />
       <main className="p-2">
         <div className="flex p-2">
-          <div className="flex flex-initial md:w-52">
+          <div className="flex flex-initial lg:w-32">
           </div>
           <div className="flex-1 p-2">
             <NewsFeed />
           </div>
-          <div className="flex flex-initial md:w-52">
+          <div className="flex flex-initial lg:w-32">
           </div>
         </div>
       </main>

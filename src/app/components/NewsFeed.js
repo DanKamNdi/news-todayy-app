@@ -33,7 +33,17 @@ export default function NewsFeed() {
     <div>
       <div className="bg-card rounded-lg p-4">
         <Link href="/headlines" className="block mb-4">
-          <h1 className="text-blue-500 text-xl hover:underline">Top Stories</h1>
+          <h1 className="text-blue-500 text-xl hover:underline flex items-center">Top Stories <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            className="ml-1"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <polyline points="9 6 15 12 9 18"></polyline>
+          </svg></h1>
         </Link>
         {/*SECTION ONE*/}
         <div className="flex flex-col md:flex-row">

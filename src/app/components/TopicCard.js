@@ -23,7 +23,7 @@ export default function TopicCard({ category }) {
 
   return (
     <div className="bg-card rounded-lg shadow-md p-4">
-      <Link href="/" className="hover:underline">
+      <Link href={`/${category.toLowerCase()}`} className="hover:underline">
         <h3 className="text-lg font-semibold mb-3 flex items-center">
           {category}
           <svg
