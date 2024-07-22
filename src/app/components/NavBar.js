@@ -22,13 +22,6 @@ export default function NavBar() {
         </Link>
       </div>
 
-      {/* Hamburger menu */}
-      <button onClick={toggleMenu} className="md:hidden ">
-        <svg className="w-6 h-6 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-          <path d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
-        </svg>
-      </button>
-
       <div className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:flex md:flex-1 md:items-center md:justify-center mt-4 md:mt-0`}>
         <Link href="/" className="block md:inline-block mx-4 font-semibold text-white hover:text-gray-300">Home</Link>
         <Link href="/headlines" className="block md:inline-block mx-4 font-semibold text-white hover:text-gray-300">Headlines</Link>
@@ -37,6 +30,12 @@ export default function NavBar() {
       </div>
 
       <div className="flex flex-1 justify-end">
+        {/* Hamburger menu */}
+        <button onClick={toggleMenu} className="md:hidden mx-3">
+          <svg className="w-8 h-8 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+            <path d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
+          </svg>
+        </button>
         {user && (
           <div className="relative group">
             <Image
